@@ -27,8 +27,6 @@ function validateAndSubmit() {
   if (!v$.value.$error) emit('formSubmit', props.formData)
 }
 
-defineExpose({ validateAndSubmit })
-
 const formErrors = computed(() => {
   const errorList: Record<string, string[]> = {}
   v$.value.$errors.forEach((err) => {
